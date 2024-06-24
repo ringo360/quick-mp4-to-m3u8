@@ -16,7 +16,6 @@ async function main() {
 	});
 	consola.info(file);
 	const file_x = file.replace(/\.[^/.]+$/, '');
-	//todo: 自動でディレクトリ作成
 	const outDir = join(__dirname, './out/' + file_x);
 	await fs.mkdir(outDir, { recursive: true });
 	const run_cmd = `ffmpeg -i target/${file} -c:v copy -c:a copy -f hls -hls_time 9 -hls_playlist_type vod -hls_segment_filename "${outDir}/output-${file_x}-%5d.ts" ${outDir}/output-${file_x}.m3u8`;
