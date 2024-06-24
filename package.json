@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "consola": "^3.2.3",
+    "tsx": "^4.15.7"
+  },
+  "name": "quick-mp4-to-m3u8",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "tsc": "^2.0.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5.5.2"
+  },
+  "scripts": {
+    "start": "tsx index.ts"
+  }
+}
